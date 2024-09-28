@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Knowledge Graph</title>
+    <link rel="stylesheet" href="../static/styles/bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../static/styles/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/main.css">
+  </head>
+  <body>
+    <div class="nav">
+      <p id="mainTitle">Knowledge Graph representation</p>
+    </div>
+    <hr>
+    <div class="mainclass">
+      <form action="{{ url_for('submit') }}" method="post" role="form" id="myForm">
+        <div class="row">
+          <div class="col-md-8" id="leftQues">
+            <div class="row">
+              <div class="col-md-2">
+                <h4><span class="label">Paragraph</span></h4>
+              </div>
+              <div class="col-md-10" style="padding-top: 10px;">
+                <select class="selectpara" name="para" style="width:450px;">
+                  <option value="ownPara" default>Write Paragraph</option>
+                </select>
+              </div>
+            </div>
+            <br>
+            <textarea placeholder="Select or write your own paragraph" style="resize:none" class="form-control" name="paragraph" id="paragraph" rows="3">{{ input_paragraph }}</textarea>
+            <br>
+            <div class="row">
+              <div class="col-md-2">
+                <h4><span class="label">Question</span></h4>
+              </div>
+              <div class="col-md-10" style="padding-top: 10px;">
+                <select class="selectpara" name="para" style="width:450px;">
+                  <option value="ownQues" default>Write Question</option>
+                </select>
+              </div>
+            </div>
+            <br>
+            <textarea placeholder="Select or ask your own question" style="resize:none" class="form-control" name="question" id="question" rows="1">{{ input_question }}</textarea>
+
+            <br>
+            <input id="btnSubmit" type="submit" name="submit" value="submit" class="btn btn-sm">
+             <a href="{{ url_for('clear') }}"><button id="btnClear" type="button" name="clear" class="btn btn-sm">Clear</button></a>
+    			</div>
+
+          <div class="col-md-4" id="rightAns">
+              <div id="answer" class="row">
+                  <h4><span class="label">Answer</span></h4>
+                  <br>
+                  <div class="ourP">
+                    <h5>Answer</h5>
+                    <textarea placeholder="Our Projected Answer" style="resize:none" class="form-control" id="answer1" rows="1" readonly>{{ my_answer }}</textarea>
+                  </div>
+                  <br>
+              </div>
+          </div>
+    		</div>
+      </form>
+    </div>
+    <br>
+    <script type="text/javascript">
+      document.getElementById("myForm").reset();
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../static/jquery-3.1.0.min.js"></script>
+    <script src="../static/jszip.min.js"></script>
+  </body>
+</html>
