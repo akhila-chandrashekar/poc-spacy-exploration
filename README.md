@@ -1,6 +1,8 @@
 # SpaCy Exploration - POC Stage
 
-
+pip install spacy coreferee
+python -m spacy download en_core_web_trf
+python3 -m coreferee install en
 ## To run the code
 
 Simply run in terminal:

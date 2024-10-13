@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:ex="http://example.org/">
+
+    <ex:dicaprio rdf:type="ex:Person">
+        <ex:bornOn>1974-11-11</ex:bornOn>
+        <ex:hasOccupation rdf:resource="ex:Actor"/>
+        <ex:hasOccupation rdf:resource="ex:Producer"/>
+        <ex:bornIn rdf:resource="ex:Los_Angeles"/>
+    </ex:dicaprio>
+
+    <ex:Los_Angeles rdf:type="ex:Place">
+        <ex:isLocatedIn rdf:resource="ex:California"/>
+    </ex:Los_Angeles>
+
+    <ex:California rdf:type="ex:Region">
+        <ex:isPartOf rdf:resource="ex:United_States"/>
+    </ex:California>
+
+    <ex:United_States rdf:type="ex:Country">
+        <ex:hasCapital rdf:resource="ex:Washington_D.C."/>
+    </ex:United_States>
+
+    <ex:Washington_D.C. rdf:type="ex:Place">
+        <ex:isCapitalOf rdf:resource="ex:United_States"/>
+    </ex:Washington_D.C.>
+</rdf:RDF>

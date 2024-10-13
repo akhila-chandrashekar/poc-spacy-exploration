@@ -1,0 +1,23 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:ex="http://example.org/">
+
+    <ex:New_York rdf:about="http://example.org/New_York">
+        <ex:population>8419600</ex:population>
+        <ex:isCapital>false</ex:isCapital>
+    </ex:New_York>
+
+    <ex:Washington_D_C rdf:about="http://example.org/Washington_D_C">
+        <ex:population>705749</ex:population>
+        <ex:isCapital>true</ex:isCapital>
+    </ex:Washington_D_C>
+
+    <ex:Los_Angeles rdf:about="http://example.org/Los_Angeles">
+        <ex:population>3980400</ex:population>
+        <ex:isCapital>false</ex:isCapital>
+    </ex:Los_Angeles>
+
+    <ex:Chicago rdf:about="http://example.org/Chicago">
+        <ex:population>2716000</ex:population>
+        <ex:isCapital>false</ex:isCapital>
+    </ex:Chicago>
+</rdf:RDF>

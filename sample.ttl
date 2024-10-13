@@ -1,0 +1,18 @@
+@prefix ex: <http://example.org/> .
+
+ex:Leonardo_DiCaprio a ex:Person ;
+    ex:bornOn "1974-11-11" ;
+    ex:hasOccupation ex:Actor, ex:Producer ;
+    ex:bornIn ex:Los_Angeles .
+
+ex:Los_Angeles a ex:Place ;
+    ex:isLocatedIn ex:California .
+
+ex:California a ex:Region ;
+    ex:isPartOf ex:United_States .
+
+ex:United_States a ex:Country ;
+    ex:hasCapital ex:Washington_D.C. .
+
+ex:Washington_D.C. a ex:Place ;
+    ex:isCapitalOf ex:United_States .
