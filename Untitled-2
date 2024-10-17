@@ -47,3 +47,43 @@
 +------------------+
 | + evaluate()     |
 +------------------+
+
+
+{
+  "ruleID": "R002",
+  "name": "Check User Access",
+  "description": "Validates user access level against the User Access Levels table.",
+  "priority": "High",
+  "status": "Active",
+  "created_at": "2024-10-12T09:00:00Z",
+  "updated_at": "2024-10-12T09:00:00Z",
+  "owner": "user456",
+  "conditions": [
+    {
+      "conditionID": "C002",
+      "ruleID": "R002",
+      "attribute": "user_access_level",
+      "operator": "==",
+      "value": "Level 1",
+      "logicalOperator": "AND",
+      "formulaID": null,
+      "tableID": "T001"
+    }
+  ],
+  "actions": [
+    {
+      "actionID": "A002",
+      "ruleID": "R002",
+      "actionType": "grant_access",
+      "parameters": {},
+      "formulaID": "F001"
+    }
+  ],
+  "tags": ["Access Control"],
+  "metadata": [
+    {
+      "key": "complianceStandard",
+      "value": "ISO 27001"
+    }
+  ]
+}
